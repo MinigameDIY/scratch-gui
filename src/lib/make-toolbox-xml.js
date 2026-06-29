@@ -292,6 +292,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
             <block id="${targetId}_costumenumbername" type="looks_costumenumbername"/>
             <block id="backdropnumbername" type="looks_backdropnumbername"/>
             <block id="${targetId}_size" type="looks_size"/>
+            <block id="${targetId}_effect_value" type="looks_effect_value"/>
         `}
         ${categorySeparator}
     </category>
