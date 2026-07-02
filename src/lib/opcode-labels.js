@@ -133,6 +133,16 @@ const messages = defineMessages({
         description: 'Label for the timescale monitor when shown on the stage',
         id: 'gui.opcodeLabels.timescale'
     },
+    sensing_deltaTime: {
+        defaultMessage: 'delta time',
+        description: 'Label for the deltatime monitor when shown on the stage',
+        id: 'gui.opcodeLabels.deltatime'
+    },
+    sensing_fps: {
+        defaultMessage: 'fps',
+        description: 'Label for the fps monitor when shown on the stage',
+        id: 'gui.opcodeLabels.fps'
+    },
     sensing_dayssince2000: {
         defaultMessage: 'days since 2000',
         description: 'Label for the days since 2000 monitor when shown on the stage',
@@ -189,6 +199,8 @@ class OpcodeLabels {
             sensing_current: {category: 'sensing'},
             sensing_timer: {category: 'sensing'},
             sensing_timeScale: {category: 'sensing'},
+            sensing_deltaTime: {category: 'sensing'},
+            sensing_fps: {category: 'sensing'},
             sensing_dayssince2000: {category: 'sensing'},
             sensing_online: {category: 'sensing'}
         };
@@ -268,6 +280,8 @@ class OpcodeLabels {
         };
         this._opcodeMap.sensing_timer.labelFn = () => this._translator(messages.sensing_timer);
         this._opcodeMap.sensing_timeScale.labelFn = () => this._translator(messages.sensing_timeScale);
+        this._opcodeMap.sensing_deltaTime.labelFn = () => this._translator(messages.sensing_deltaTime);
+        this._opcodeMap.sensing_fps.labelFn = () => this._translator(messages.sensing_fps);
         this._opcodeMap.sensing_dayssince2000.labelFn = () => this._translator(messages.sensing_dayssince2000);
         this._opcodeMap.sensing_online.labelFn = () => this._translator(messages.sensing_online);
     }

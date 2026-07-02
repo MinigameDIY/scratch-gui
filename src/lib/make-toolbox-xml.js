@@ -520,6 +520,8 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
         <block id="timer" type="sensing_timer"/>
         <block type="sensing_resettimer"/>
         <block id="time_scale" type="sensing_timeScale"/>
+        <block id="delta_time" type="sensing_deltaTime"/>
+        <block id="fps" type="sensing_fps"/>
         ${blockSeparator}
         <block id="of" type="sensing_of">
             <value name="OBJECT">
