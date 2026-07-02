@@ -6,6 +6,7 @@ import VM from 'scratch-vm';
 import Box from '../box/box.jsx';
 import {STAGE_DISPLAY_SIZES} from '../../lib/layout-constants.js';
 import StageHeader from '../../containers/stage-header.jsx';
+import StageTimeScaleSlider from '../../containers/stage-timescale-slider.jsx';
 import Stage from '../../containers/stage.jsx';
 import Loader from '../loader/loader.jsx';
 
@@ -34,13 +35,15 @@ const StageWrapperComponent = function (props) {
                 }
             )}
             dir={isRtl ? 'rtl' : 'ltr'}
-        >
-            <Box className={styles.stageMenuWrapper}>
-                <StageHeader
-                    stageSize={stageSize}
-                    vm={vm}
-                />
-            </Box>
+        >  
+            <div className={styles.stageColumnWrapper}>
+                <Box className={styles.stageMenuWrapper}>
+                    <StageTimeScaleSlider stageSize={stageSize} vm={vm} />
+                </Box>
+                <Box className={styles.stageMenuWrapper}>
+                    <StageHeader stageSize={stageSize} vm={vm} />
+                </Box>
+            </div>
             <Box className={styles.stageCanvasWrapper}>
                 {
                     isRendererSupported ?

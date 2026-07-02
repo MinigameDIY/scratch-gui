@@ -129,7 +129,7 @@ const messages = defineMessages({
         id: 'gui.opcodeLabels.timer'
     },
     sensing_timeScale: {
-        defaultMessage: 'time scale',
+        defaultMessage: 'game speed',
         description: 'Label for the timescale monitor when shown on the stage',
         id: 'gui.opcodeLabels.timescale'
     },

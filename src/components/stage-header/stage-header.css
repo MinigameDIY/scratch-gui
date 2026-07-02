@@ -4,7 +4,6 @@
 @import "../../css/filters.css";
 
 .stage-header-wrapper {
-    position: absolute;
     top: 0;
 }
 [dir="ltr"] .stage-header-wrapper {
