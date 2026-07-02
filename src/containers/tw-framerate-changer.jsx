@@ -32,8 +32,6 @@ class FramerateChanger extends React.Component {
             if (isFinite(fps) && fps > 0) {
                 this.props.vm.setFramerate(fps);
             }
-        } else if (this.props.framerate === 60) {
-            this.props.vm.setFramerate(30);
         } else {
             this.props.vm.setFramerate(60);
         }
