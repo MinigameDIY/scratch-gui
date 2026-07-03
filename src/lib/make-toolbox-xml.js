@@ -390,6 +390,14 @@ const events = function (isInitialSetup, isStage, targetId, colors) {
               <shadow type="event_broadcast_menu"></shadow>
             </value>
         </block>
+        ${blockSeparator}
+        <block type="event_whenwinlose"/>
+        ${blockSeparator}
+        <block type="event_wingame"/>
+        <block type="event_losegame"/>
+        ${blockSeparator}
+        <block id="isgameover" type="event_isgameover"/>
+        <block id="gamestate" type="event_gamestate"/>
         ${categorySeparator}
     </category>
     `;

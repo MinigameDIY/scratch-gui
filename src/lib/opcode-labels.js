@@ -57,6 +57,18 @@ const messages = defineMessages({
         id: 'gui.opcodeLabels.tempo'
     },
 
+    // Events
+    event_isgameover: {
+        defaultMessage: 'is game over?',
+        description: 'Name of "is game over?" block',
+        id: 'tw.opcode.isgameover'
+    },
+    event_gamestate: {
+        defaultMessage: 'game state',
+        description: 'Name of "game state" block',
+        id: 'tw.opcode.gamestate'
+    },
+
     // Sensing
     sensing_answer: {
         defaultMessage: 'answer',
@@ -181,6 +193,10 @@ class OpcodeLabels {
             looks_backdropnumbername: {category: 'looks'},
             looks_backdropname: {category: 'looks'},
 
+            // Events
+            event_isgameover: {category: 'event'},
+            event_gamestate: {category: 'event'},
+
             // Data
             data_variable: {category: 'data'},
             data_listcontents: {category: 'list'},
@@ -252,6 +268,10 @@ class OpcodeLabels {
         // Sound
         this._opcodeMap.sound_volume.labelFn = () => this._translator(messages.sound_volume);
         this._opcodeMap.sound_tempo.labelFn = () => this._translator(messages.sound_tempo);
+
+        // Events
+        this._opcodeMap.event_isgameover.labelFn = () => this._translator(messages.event_isgameover);
+        this._opcodeMap.event_gamestate.labelFn = () => this._translator(messages.event_gamestate);
 
         // Sensing
         this._opcodeMap.sensing_answer.labelFn = () => this._translator(messages.sensing_answer);
