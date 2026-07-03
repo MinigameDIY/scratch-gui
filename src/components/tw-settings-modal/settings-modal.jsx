@@ -313,7 +313,7 @@ const DisableCompiler = props => (
         help={
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="Disables the {APP_NAME} compiler. You may want to enable this while editing projects so that scripts update immediately. Otherwise, you should never enable this."
+                defaultMessage="Disables the {APP_NAME} compiler. You may want to enable this while editing projects so that scripts update immediately. Otherwise, you should never enable this. Will only apply inside the editor."
                 description="Disable Compiler help"
                 id="tw.settingsModal.disableCompilerHelp"
                 values={{
@@ -440,7 +440,7 @@ const SettingsModalComponent = props => (
         id="settingsModal"
     >
         <Box className={styles.body}>
-            <Header>
+            {/*<Header>
                 <FormattedMessage
                     defaultMessage="Featured"
                     description="Settings modal section"
@@ -494,16 +494,16 @@ const SettingsModalComponent = props => (
                 <CustomStageSize
                     {...props}
                 />
-            )}
+            )}*/}
             <DisableCompiler
                 value={props.disableCompiler}
                 onChange={props.onDisableCompilerChange}
             />
-            {!props.isEmbedded && (
+            {/*{!props.isEmbedded && (
                 <StoreProjectOptions
                     {...props}
                 />
-            )}
+            )}*/}
         </Box>
     </Modal>
 );
