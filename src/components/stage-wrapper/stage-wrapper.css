@@ -16,7 +16,11 @@
 }
 
 .offset-controls .stage-canvas-wrapper {
-    padding-top: 44px;
+}
+
+.stage-column-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .stage-wrapper.full-screen {

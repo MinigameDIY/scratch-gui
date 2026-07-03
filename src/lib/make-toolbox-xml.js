@@ -292,6 +292,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
             <block id="${targetId}_costumenumbername" type="looks_costumenumbername"/>
             <block id="backdropnumbername" type="looks_backdropnumbername"/>
             <block id="${targetId}_size" type="looks_size"/>
+            <block id="${targetId}_effect_value" type="looks_effect_value"/>
         `}
         ${categorySeparator}
     </category>
@@ -389,6 +390,14 @@ const events = function (isInitialSetup, isStage, targetId, colors) {
               <shadow type="event_broadcast_menu"></shadow>
             </value>
         </block>
+        ${blockSeparator}
+        <block type="event_whenwinlose"/>
+        ${blockSeparator}
+        <block type="event_wingame"/>
+        <block type="event_losegame"/>
+        ${blockSeparator}
+        <block id="isgameover" type="event_isgameover"/>
+        <block id="gamestate" type="event_gamestate"/>
         ${categorySeparator}
     </category>
     `;
@@ -423,6 +432,13 @@ const control = function (isInitialSetup, isStage, targetId, colors) {
         <block type="control_if_else"/>
         <block id="wait_until" type="control_wait_until"/>
         <block id="repeat_until" type="control_repeat_until"/>
+        <block id="repeat_sec" type="control_repeat_sec">
+            <value name="SECS">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
         <block id="while" type="control_while"/>
         ${blockSeparator}
         <block type="control_stop"/>
@@ -511,6 +527,9 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
         ${blockSeparator}
         <block id="timer" type="sensing_timer"/>
         <block type="sensing_resettimer"/>
+        <block id="time_scale" type="sensing_timeScale"/>
+        <block id="delta_time" type="sensing_deltaTime"/>
+        <block id="fps" type="sensing_fps"/>
         ${blockSeparator}
         <block id="of" type="sensing_of">
             <value name="OBJECT">

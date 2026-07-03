@@ -13,6 +13,7 @@ const MODAL_CONNECTION = 'connectionModal';
 const MODAL_TIPS_LIBRARY = 'tipsLibrary';
 const MODAL_USERNAME = 'usernameModal';
 const MODAL_SETTINGS = 'settingsModal';
+const MODAL_MINIGAME_SETTINGS = 'minigameSettingsModal';
 const MODAL_CUSTOM_EXTENSION = 'customExtensionModal';
 const MODAL_RESTORE_POINTS = 'restorePointModal';
 const MODAL_FONTS = 'fontsModal';
@@ -102,6 +103,9 @@ const openUsernameModal = function () {
 const openSettingsModal = function () {
     return openModal(MODAL_SETTINGS);
 };
+const openMinigameSettingsModal = function () {
+    return openModal(MODAL_MINIGAME_SETTINGS);
+};
 const openCustomExtensionModal = function () {
     return openModal(MODAL_CUSTOM_EXTENSION);
 };
@@ -153,6 +157,9 @@ const closeUsernameModal = function () {
 const closeSettingsModal = function () {
     return closeModal(MODAL_SETTINGS);
 };
+const closeMinigameSettingsModal = function () {
+    return closeModal(MODAL_MINIGAME_SETTINGS);
+};
 const closeCustomExtensionModal = function () {
     return closeModal(MODAL_CUSTOM_EXTENSION);
 };
@@ -183,6 +190,7 @@ export {
     openConnectionModal,
     openUsernameModal,
     openSettingsModal,
+    openMinigameSettingsModal,
     openCustomExtensionModal,
     openRestorePointModal,
     openFontsModal,
@@ -200,6 +208,7 @@ export {
     closeConnectionModal,
     closeUsernameModal,
     closeSettingsModal,
+    closeMinigameSettingsModal,
     closeCustomExtensionModal,
     closeRestorePointModal,
     closeFontsModal,
